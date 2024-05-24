@@ -90,7 +90,7 @@ az keyvault create \
   --name "${kvname}" \
   --resource-group "${kvrg}" \
   --location "${kvloc}"
-kvid="$(az keyvault show --name "${name}" -o tsv --query '[id]')"
+kvid="$(az keyvault show --name "${kvname}" -o tsv --query '[id]')"
 
 # Protect the KeyVault from deletion
 az lock create \
